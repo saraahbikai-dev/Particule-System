@@ -1,8 +1,8 @@
 
-const canvas = document.getElementById('body');
-const ctx = body.getContext('2D');
-body.width = window.innerWidth;
-body.height = window.innerHeight;
+const canvas = document.getElementById('canvas1');
+const ctx = canvas.getContext('2D');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 const edge =80;
 const mouse = {
@@ -38,7 +38,7 @@ class Root {
    const distanceY = this.y -this.centerY;
    const distance = Math.sqrt(distanceX * distanceX + distanceY * 
    distanceY);
-   const raduis = (-distance/ edge +1)* edge/10;
+   const radius = (-distance/ edge +1)* edge/10;
    if (radius > 0) {
    requestAnimationFrame(this.draw);
    ctx.beginPath();
