@@ -70,7 +70,8 @@ window.addEventListener('resize',function(){
 });
   
 window.addEventListener('mousemove', function(){
-  
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  branchOut();
   
 })
 
