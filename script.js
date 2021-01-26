@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2D');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const edge = 80;
+const edge = 140;
 const mouse = {
   x:null,
   y:null
@@ -71,7 +71,7 @@ window.addEventListener('resize',function(){
 });
   
 window.addEventListener('mousemove', function(){
-  ctx.fillStyle ='rgba(0,0,255,0.03)';
+  ctx.fillStyle ='rgba(255,255,255,0.03)';
   ctx.fillRect(0, 0 canvas.width, canvas.height);
   branchOut();
   
