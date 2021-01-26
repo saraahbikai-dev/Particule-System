@@ -40,7 +40,7 @@ class Root {
    distanceY);
    const radius = (-distance/ edge +1)* edge/10;
    if (radius > 0) {
-   requestAnimationFrame(this.draw);
+   requestAnimationFrame(this.draw.bind(this));
    ctx.beginPath();
    ctx.arc(this.x, this.y, radius, 0, 2* Math.PI);
    ctx.fillStyle = this.color;
@@ -70,7 +70,7 @@ window.addEventListener('resize',function(){
 });
   
 window.addEventListener('mousemove', function(){
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   branchOut();
   
 })
