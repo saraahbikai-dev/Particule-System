@@ -1,8 +1,8 @@
 
-const canvas = document.getElementById('canvas1');
-const ctx = canvas.getContext('2D');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const canvas = document.getElementById('body');
+const ctx = body.getContext('2D');
+body.width = window.innerWidth;
+body.height = window.innerHeight;
 
 const edge =80;
 const mouse = {
@@ -64,8 +64,8 @@ class Root {
   }
 
 window.addEventListener('resize',function(){
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  body.width = window.innerWidth;
+  body.height = window.innerHeight;
   
 });
   
