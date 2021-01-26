@@ -64,8 +64,8 @@ class Root {
   }
 
 window.addEventListener('resize',function(){
-  body.width = window.innerWidth;
-  body.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
   
 });
   
