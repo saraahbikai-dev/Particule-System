@@ -31,16 +31,13 @@ class Root {
  draw(){
   this.speedX += (Math.random()-0.5) /2;
   this.speedY += (Math.random()-0.5) /2;
-  this.x += this.speedX
-  this.Y += this.speedY
+  this.x += this.speedX;
+  this.Y += this.speedY;
    
    const distanceX = this.x -this.centerX;
    const distanceY = this.y -this.centerY;
    const distance = (distanceX * distanceX + distanceY * 
-   distanceY
-   
-   
-   
+   distanceY) 
  }
   
 
