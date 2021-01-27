@@ -3,7 +3,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const edge = 140;
+const edge = 50;
+let drawing = false;
 const mouse = {
   x:null,
   y:null
@@ -12,7 +13,7 @@ const mouse = {
 window.addEventListener('mousemove',function(event){
    mouse.x = event.x;
    mouse.y = event.y;
-   console.log(mouse.x);
+   console.log(drawing);
 })
 
 class Root {
@@ -54,6 +55,7 @@ class Root {
 }  
   
 function branchOut(){
+  if (drawing === true) {
    const centerX = mouse.x;
    const centerY = mouse.y;
    for (let i = 0; i < 3; i++){
@@ -61,6 +63,7 @@ function branchOut(){
      root.draw();
     
    }
+  }
 }
 
 window.addEventListener('resize',function(){
@@ -70,10 +73,18 @@ window.addEventListener('resize',function(){
 });
   
 window.addEventListener('mousemove', function(){
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //ctx.fillStyle = 'rgba (255,255,255, 0.03)';
+  //ctx.fillRect(0, 0, canvas.width, canvas.height);
   branchOut();
   
 })
 
+window.addEventListener('mousedown',function(){
+  drawing = true;
+});
+
+window.addEventListener('mouseup',function(){
+  drawing = false;
+});
 
 
