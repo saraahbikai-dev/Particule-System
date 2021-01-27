@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const edge = 50;
+const edge = 140;
 let drawing = false;
 const mouse = {
   x:null,
@@ -13,7 +13,7 @@ const mouse = {
 window.addEventListener('mousemove',function(event){
    mouse.x = event.x;
    mouse.y = event.y;
-   console.log(drawing);
+   console.log(mouse.x);
 })
 
 class Root {
