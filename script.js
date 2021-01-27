@@ -1,6 +1,6 @@
 
 const canvas = document.getElementById('canvas1');
-const ctx = canvas.getContext('2D');
+const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -71,7 +71,7 @@ window.addEventListener('resize',function(){
 });
   
 window.addEventListener('mousemove', function(){
-  ctx.fillStyle ='rgba(255,255,255,0.03)';
+  ctx.fillStyle = 'rgba(255,255,255, 0)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   branchOut();
   
